@@ -1,38 +1,812 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
+  background-image: url("./images/backgr.jpg");
+  background-size: 100% 100%;
+  height: 100vh;
+  margin-top: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.root{
+  padding: 0px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@media (min-aspect-ratio: 1/1.3){
+
+.or{
+  background-image: url("./images/versus.png");
+  width: 200px;
+  height: 200px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.books{
+  display: flex; 
+  justify-content: center;
+}
+
+.book{
   display: flex;
   flex-direction: column;
+  width: 28vw;
+}
+
+.bookimg1{
+  cursor: pointer;
+  border: 0.15vw solid white;
+  transition: 0.4s ease all;
+  border-radius: 0.7vw;
+  width: 28vw;
+  height: 18vw;
+}
+
+.bookimg1:hover{
+  transition: 0.4s ease all;
+  rotate: -1.5deg;
+}
+
+.bookimg{
+  cursor: pointer;
+  border: 0.15vw solid white;
+  transition: 0.4s ease all;
+  border-radius: 0.7vw;
+  width: 28vw;
+  height: 18vw;
+}
+
+.bookimg:hover{
+  transition: 0.4s ease all;
+  rotate: 1.5deg;
+}
+
+.versus{
+  margin-left: 5vw;
+  margin-right: 5vw;
+  width: 20vw;
+  height: 20vw;
+}
+
+.but1{
+  /* clip-path: polygon(20% 0%, 0% 100%, 80% 100%, 100% 0%); */
+  background-color: rgb(129, 20, 20);
+  height: 4vw;
+  color: white;
+  font-size: 2vw;
+  cursor: pointer;
+  transition: 0.2s ease all;
+  border: 0.14vw solid white;
+  border-radius: 0.4vw;
+  margin-top: 2.5vw;
+}
+.but2{
+  /* clip-path: polygon(0% 0%, 20% 100%, 100% 100%, 80% 0%); */
+  background-color: rgb(129, 20, 20);
+  height: 4vw;
+  color: white;
+  font-size: 2vw;
+  cursor: pointer;
+  transition: 0.2s ease all;
+  border: 0.14vw solid white;
+  border-radius: 0.4vw;
+  margin-top: 2.5vw;
+}
+
+.but1:hover{
+  background-color: rgb(158, 3, 3);
+  transition: 0.2s ease all;
+}
+.but2:hover{
+  background-color: rgb(158, 3, 3);
+  transition: 0.2s ease all;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background-color: transparent;
+  /* border: 1px solid red; */
+  height: 10vh;
+}
+
+.navmid{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 40%;
+}
+
+.navchild{
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  transition: 0.4s ease all;
+  font-size: 1.5vw;
+}
+
+.logo{
+  width: 20%;
+  display: flex;
+  justify-content: left;
+}
+
+.logo a{
+  margin-left: 1.5vw;
+  text-decoration: none;
+  font-size: 3vw;
+  color: white;
+  font-weight: bold;
+}
+
+.navchild:hover{
+  color: rgb(255, 57, 57);
+  transition: 0.3s ease all;
+}
+
+.all{
+  margin-top: 4vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.all h2{
+  margin-bottom: 10vh;
+  font-size: 3vw;
+}
+
+.totalrank{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0%;
+}
+
+.rankrowhead{
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  height: 15%;
+  margin-bottom: 3.2vh;
+  padding: 0%;
+}
+
+.list{
+  width: 80vw;
+  height: 80%;
+  overflow-y: scroll;
+}
+
+
+.list::-webkit-scrollbar {
+  width: 0.001vw;
+  background-color: transparent;
+}
+
+.list::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.rankrow{
+  display: flex;
+  justify-content: center;
+  /* padding-left: 32vw; */
+  width: 80vw;
+  height: 10%;
+  margin-top: 3vh;
+  color: black;
+  background-color: white;
+  font-size: 2.5vw;
+  align-items: center;
+  font-weight: 700;
+  border-radius: 0.5vw;
+}
+
+.rankind{
+  width: 5%;
+  background-color: white;
+  color: black;
+  text-align: center;
+  height: 70%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  border: 1px black solid;
+  border-radius: 0.3vw;
+  font-size: 2vw;
+}
+
+.rankval{
+  width: 28%;
+  /* background-image: linear-gradient(to bottom, gold, red); */
+  background-color: rgb(129, 20, 20);
+  color: white;
+  text-align: center;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px black solid;
+  border-radius: 0.3vw;
+  font-size: 2vw;
+}
+
+.rankval1{
+  width: 50%;
+  /* background-image: linear-gradient(to bottom, gold, red); */
+  background-color: rgb(129, 20, 20);
+  color: white;
+  text-align: center;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px black solid;
+  border-radius: 0.3vw;
+  /* clip-path: polygon(0% 50%, 10% 100%, 100% 100%, 100% 0%, 10% 0%); */
+  font-size: 2vw;
+}
+
+.title{
+  font-size: 50px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.about{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.aboutt{
+  width: 56%;
+  height: 63vh;
+  background-color: rgba(1, 45, 14, 0.4);
+  margin-top: 3vh;
+  border-radius: 1vw;
+  border: 0.2vw solid white;
+  padding: 4%;
+  color: white;
+  font-size: 2.3vw;
+  text-align: left;
+  overflow-y: scroll;
+}
+
+.ablis{
+  margin-bottom: 5vh;
+}
+
+.ablis1{
+  text-align: center;
+  margin-top: 2vw;
+  font-size: 2.3vw;
+  color: white;
+  width: 100%;
+}
+
+.aboutt::-webkit-scrollbar {
+  width: 0.5em; /* adjust the width as needed */
+  background-color: transparent; /* make the scrollbar track transparent */
+}
+
+.aboutt::-webkit-scrollbar-thumb {
+  background-color: transparent; /* make the scrollbar thumb transparent */
+}  
+
+.totalrank{
+  width: 100vw;
+  height: 80vh;
+}
+
+.sidebar{
+  display: none;
+}
+
+.allrank{
+  width: 80vw;
+}
+
+.rankhead{
+  width: 10vw;
+}
+
+.rankcontent{
+  width: 70vw;
+}
+
+.contact{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 4vw;
+}
+
+.contactimg{
+  color: white;
+}
+
+.contactimg:hover{
+  color: black;
+  transition: 0.3s ease;
+}
+
+
+}
+
+
+@media (max-aspect-ratio: 1/1.3){
+
+  .ablis1{
+    color: white;
+    width: 100%;
+    font-size: 5vw;
+    margin-bottom: 10vw;
   }
-  to {
-    transform: rotate(360deg);
+
+  .contact{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 4vw;
   }
+  
+  .contactimg{
+    color: white;
+  }
+
+  .rankhead{
+    width: 12vw;
+  }
+
+  .rankcontent{
+    width: 78vw;
+  }
+
+  .allrank{
+    width: 90vw;
+  }
+
+  .navbar{
+    display: none;
+  }
+
+
+  .all{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .all h2{
+    margin-top: 12vh;
+    margin-bottom: 5vh;
+    font-size: 6vw;
+  }
+
+  .books{
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .book{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+  }
+  
+  .bookimg1{
+    cursor: pointer;
+    border: 0.15vw solid white;
+    transition: 0.4s ease all;
+    border-radius: 0.7vw;
+    width: 50vw;
+    height: 20vh;
+  }
+  
+  .bookimg{
+    cursor: pointer;
+    border: 0.15vw solid white;
+    transition: 0.4s ease all;
+    border-radius: 0.7vw;
+    width: 50vw;
+    height: 20vh;
+  }
+  
+  .versus{
+    width: 40vw;
+    height: 20vh;
+  }
+  
+  .but1{
+    /* clip-path: polygon(20% 0%, 0% 100%, 80% 100%, 100% 0%); */
+    background-color: rgb(129, 20, 20);
+    width: 100%;
+    height: 8vw;
+    color: white;
+    font-size: 4vw;
+    cursor: pointer;
+    transition: 0.2s ease all;
+    border: 0.14vw solid white;
+    border-radius: 0.4vw;
+    margin-top: 2.5vw;
+  }
+  .but2{
+    /* clip-path: polygon(0% 0%, 20% 100%, 100% 100%, 80% 0%); */
+    background-color: rgb(129, 20, 20);
+    width: 100%;
+    height: 8vw;
+    color: white;
+    font-size: 4vw;
+    cursor: pointer;
+    transition: 0.2s ease all;
+    border: 0.14vw solid white;
+    border-radius: 0.4vw;
+    margin-top: 2.5vw;
+  }
+
+
+  /* -----------------------------------------------------  sidebar css  ------------------------------------------------------ */
+
+
+  .sidebar{
+    position: fixed;
+    height: 10vh;
+    width: 100vw;
+    z-index: 20;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    /* border: 1px solid green; */
+  }
+
+  .sidebar.open{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 20;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    background-image: url("./images/backgr.jpg");
+    background-size: 100% 100%;
+    /* border: 1px solid green; */
+  }
+
+  .sidebar .logo-details{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+  }
+
+  .sidebar.open .logo-details{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+  }
+  
+  .sidebar .logo-details .logo_name{
+    width: 50vw;
+    height: 10vh;
+    padding-left: 4vw;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: #fff;
+    font-size: 2.4vh;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+
+  .sidebar.open .logo-details .logo_name{
+    width: 50vw;
+    height: 10vh;
+    padding-left: 4vw;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: #fff;
+    font-size: 2.4vh;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+
+  .sidebar .logo-details .logo_name a{
+    text-decoration: none;
+    color: white;
+    font-size: 7vw;
+  }
+
+  .sidebar.open .logo-details .logo_name a{
+    text-decoration: none;
+    color: white;
+    font-size: 7vw;
+  }
+  
+  .sidebar .logoicon{
+    width: 50vw;
+    height: 10vh;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+
+  .sidebar.open .logoicon{
+    width: 50vw;
+    height: 10vh;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+  
+  .sidebar .logoicon #btn{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    transition: all 0.5s ease;
+    font-size: 10vw;
+    color: white;
+    margin-right: 4vw;
+    height: 6%;
+    width: 10%;
+  }
+
+  .sidebar.open .logoicon #btn{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    transition: all 0.5s ease;
+    font-size: 10vw;
+    color: white;
+    margin-right: 4vw;
+    height: 6%;
+    width: 10%;
+  }
+  
+  .sidebar li{
+    width: 100%;
+    height: 28%;
+    list-style: none;
+    background-image: none;
+    transition: 0.2s ease;
+    background-color: #11101d;
+    opacity: 0;
+  }
+  
+  .sidebar.open li{
+    width: 100%;
+    height: 28%;
+    list-style: none;
+    transition: 0.2s ease;
+    opacity: 1;
+    background-color: transparent;
+  }
+  
+  .sidebar li a{
+    display: flex;
+    text-align: center;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.2s ease;
+    opacity: 0;
+  }
+  
+  .sidebar.open li a{
+    display: flex;
+    text-align: center;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.2s ease;
+    opacity: 1;
+    background-color: transparent;
+  }
+  
+  .sidebar li a .links_name{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    opacity: 0;
+    transition: 0.3s ease;
+  }
+  
+  .sidebar.open li a .links_name{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8vw;
+    color: white;
+    font-weight: 400;
+    opacity: 1;
+    transition: 0.3s ease;
+    background-color: transparent;
+  }
+  
+  .sidebar .nav-list{
+    width: 100vw;
+    height: 0vh;
+    transition: 0.2s ease;
+    opacity: 0;
+    margin-top: 2vh;
+    border-radius: 2vw;
+  }
+  
+  
+  .sidebar.open .nav-list{
+    margin: 0;
+    padding: 0;
+    width: 80vw;
+    height: 50vh;
+    transition: 0.2s ease;
+    background-color: rgba(1, 14, 7, 0.6);
+    border: 0.1vw solid gold;
+    opacity: 1;
+    margin-top: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 2vw;
+  }
+
+  /* --------------------------------------------------------  sidebar css ends  --------------------------------------------------------------- */
+
+
+.about{
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.aboutt{
+  width: 76%;
+  height: 70vh;
+  margin-top: 15vh;
+  background-color: rgba(1, 45, 14, 0.4);
+  border-radius: 1vw;
+  border: 0.2vw solid white;
+  padding: 4%;
+  color: white;
+  font-size: 6vw;
+  text-align: left;
+  overflow-y: scroll;
+}
+
+.ablis{
+  margin-bottom: 5vw;
+}
+
+.ablis1{
+  text-align: center;
+  margin-top: 2vw;
+}
+
+
+
+.totalrank{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0%;
+}
+
+.rankrowhead{
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  height: 10%;
+  margin-bottom: 3.2vh;
+  padding: 0%;
+}
+
+.list{
+  width: 80vw;
+  height: 85%;
+  overflow-y: scroll;
+}
+
+
+.list::-webkit-scrollbar {
+  width: 0.001vw;
+  background-color: transparent;
+}
+
+.list::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.rankrow{
+  display: flex;
+  justify-content: center;
+  /* padding-left: 32vw; */
+  width: 80vw;
+  height: 5%;
+  margin-top: 3vh;
+  color: black;
+  background-color: white;
+  font-size: 4.5vw;
+  align-items: center;
+  font-weight: 700;
+  border-radius: 1vw;
+}
+
+.rankind{
+  width: 10%;
+  background-color: white;
+  color: black;
+  text-align: center;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px black solid;
+  border-radius: 1vw;
+  font-size: 4vw;
+}
+
+.rankval{
+  width: 25%;
+  /* background-image: linear-gradient(to bottom, gold, red); */
+  background-color: rgb(129, 20, 20);
+  color: white;
+  text-align: center;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px black solid;
+  border-radius: 1vw;
+  font-size: 4vw;
+}
+
+.rankval1{
+  width: 48%;
+  /* background-image: linear-gradient(to bottom, gold, red); */
+  background-color: rgb(129, 20, 20);
+  color: white;
+  text-align: center;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px black solid;
+  border-radius: 1vw;
+  /* clip-path: polygon(0% 50%, 10% 100%, 100% 100%, 100% 0%, 10% 0%); */
+  font-size: 4vw;
+}
+
+
 }

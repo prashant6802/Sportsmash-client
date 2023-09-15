@@ -104,14 +104,14 @@ const Books = () => {
       <div className="books">
 
             <div className="book">
-                <img className='bookimg' src={isHovered1 ? books[0].image2 : books[0].image1} alt="not fetched" onMouseEnter={handleHover1} onMouseLeave={handleLeave1} onClick={handleUpdate}/>
+                <img className='bookimg' src={books[0].image1} alt="not fetched"onClick={handleUpdate}/>
                 <button className='but1' onClick={handleUpdate}>{books[0].name}</button>
             </div>
 
             <img src={"https://i.imgur.com/nS0uJ7B.png"} alt="not fetched" className='versus'/>
 
             <div className="book">
-                <img className='bookimg1' src={isHovered2 ? books[1].image2 : books[1].image1} alt="not fetched" onMouseEnter={handleHover2} onMouseLeave={handleLeave2} onClick={handleUpdate2}/>
+                <img className='bookimg1' src={books[1].image1} alt="not fetched"onClick={handleUpdate2}/>
                 <button className='but2' onClick={handleUpdate2}>{books[1].name}</button>
             </div>
         
